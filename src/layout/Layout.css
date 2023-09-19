@@ -4,14 +4,68 @@
     --offwhite: #EEEADE;
     --gray: #f3f4f5;
     --black: #000;
+    --black-1: #666;
     --menu-weight: 500;
     --primary-color: #C59855;
+    --pink: #fd7685;
     --menusize: 16px;
+    --small-size: 12px;
+    --very-small-size: 10px;
 }
 
 * {
-    color: var(--black);
     font-family: 'Inter', sans-serif;
+}
+
+.Footer {
+    & .site-maps {
+        padding: 1rem 0;
+        & .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            color: var(--black-1);
+
+            & .site-map-column {
+                & .heading-text {
+                    margin-bottom: 0.5rem;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    -webkit-letter-spacing: 0;
+                    -moz-letter-spacing: 0;
+                    -ms-letter-spacing: 0;
+                    letter-spacing: 0;
+                }
+
+                & .list-section {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 8px;
+                    & a {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        color: var(--black-1);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+   & .declaration {
+        background-color: var(--pink);
+        padding: 10px 0;
+       & p {
+            color: var(--white);
+            font-size: var(--small-size);
+            text-align: center;
+            text-transform: capitalize;
+            margin: 0;
+            width: fit-content;
+            margin-inline: auto;
+        }
+    }
 }
 
 .Header {
